@@ -3,61 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <title>Your Portfolio</title>
 </head>
 <body>
-    <header class="bg-gray-800 text-white p-4">
-        <div class="container mx-auto">
-            <h1 class="text-4xl font-semibold">Your Name</h1>
-            <p class="text-lg">Web Developer & Designer</p>
+    <header class="header">
+        <nav class="nav">
+            <div class="container">
+                <a href="#" class="logo">Your Name</a>
+                <div class="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-list">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="hero">
+            <div class="container">
+                <h1 class="hero-title">Nine years creating meaningful products and design experiences</h1>
+            </div>
         </div>
     </header>
 
-    <nav class="bg-gray-900 text-white p-4">
-        <div class="container mx-auto">
-            <ul class="flex space-x-4">
-                <li><a href="#about">About</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <section id="about" class="bg-white py-10">
-        <div class="container mx-auto">
-            <h2 class="text-2xl font-semibold">About Me</h2>
-            <p class="text-lg">Write a brief introduction about yourself here.</p>
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla aliquet lacinia fringilla.</p>
         </div>
     </section>
 
-    <section id="portfolio" class="bg-gray-100 py-10">
-        <div class="container mx-auto">
-            <h2 class="text-2xl font-semibold">Portfolio</h2>
-            <!-- Add your projects here with images, descriptions, and links -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                <div class="bg-white p-4 shadow">
-                    <img src="project1.jpg" alt="Project 1" class="mb-4">
-                    <h3 class="text-lg font-semibold">Project 1</h3>
-                    <p class="text-gray-600">Description of your project goes here.</p>
-                    <a href="#" class="text-blue-500 hover:underline">View Project</a>
-                </div>
-                <!-- Add more projects here -->
-            </div>
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2 class="section-title">Portfolio</h2>
+            <!-- Add your portfolio items here -->
         </div>
     </section>
 
-    <section id="contact" class="bg-gray-800 text-white py-10">
-        <div class="container mx-auto">
-            <h2 class="text-2xl font-semibold">Contact Me</h2>
-            <p class="text-lg">You can reach me at <a href="mailto:your@email.com" class="text-blue-500 hover:underline">your@email.com</a>.</p>
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Me</h2>
+            <p>You can reach me at <a href="mailto:your@email.com">your@email.com</a>.</p>
         </div>
     </section>
 
-    <footer class="bg-gray-900 text-white p-4">
-        <div class="container mx-auto text-center">
+    <footer class="footer">
+        <div class="container">
             <p>&copy; 2023 Your Name</p>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

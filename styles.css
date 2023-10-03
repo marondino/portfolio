@@ -6,103 +6,142 @@ body, h1, h2, h3, p, ul, li, a {
     text-decoration: none;
 }
 
-/* Set a background color and font */
+/* Global styles */
 body {
-    background-color: #f3f4f6;
     font-family: Arial, sans-serif;
+    color: #101010;
+    background-color: #ffffff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 /* Header styles */
-header {
-    background-color: #1a202c;
+.header {
+    background-color: #000;
     color: #fff;
-    padding: 1rem 0;
-    text-align: center;
+    padding: 20px 0;
 }
 
-header h1 {
-    font-size: 2.5rem;
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-header p {
-    font-size: 1.2rem;
-}
-
-/* Navigation styles */
-nav {
-    background-color: #2d3748;
-    padding: 1rem 0;
-}
-
-nav ul {
-    text-align: center;
-}
-
-nav li {
-    display: inline;
-    margin: 0 20px;
-}
-
-nav a {
-    color: #fff;
-    font-size: 1.2rem;
+.logo {
+    font-size: 1.5rem;
     font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: #fff;
+    margin: 4px 0;
+    transition: transform 0.3s;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+}
+
+.nav-list li {
+    margin-right: 20px;
+}
+
+.nav-list a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Hero styles */
+.hero {
+    background-image: url('your-unsplash-image.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.hero-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
 }
 
 /* Section styles */
-section {
-    background-color: #fff;
-    padding: 2rem;
-    margin: 2rem 0;
-}
-
-section h2 {
+.section-title {
     font-size: 2rem;
-    margin-bottom: 1rem;
-}
-
-/* Portfolio project styles */
-.project {
-    background-color: #edf2f7;
-    padding: 1rem;
-    margin-bottom: 2rem;
-}
-
-.project img {
-    max-width: 100%;
-    height: auto;
-    border: 1px solid #d2d6dc;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.project h3 {
-    font-size: 1.5rem;
-    margin: 1rem 0;
-}
-
-.project p {
-    font-size: 1rem;
-}
-
-.project a {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #2d3748;
-    color: #fff;
-    text-decoration: none;
     font-weight: bold;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+    margin-bottom: 20px;
 }
 
-.project a:hover {
-    background-color: #4a90e2;
+.about,
+.portfolio,
+.contact {
+    padding: 40px 0;
 }
 
 /* Footer styles */
-footer {
-    background-color: #1a202c;
+.footer {
+    background-color: #000;
     color: #fff;
     text-align: center;
-    padding: 1rem 0;
+    padding: 20px 0;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        background-color: #000;
+        z-index: 100;
+        width: 200px;
+        text-align: right;
+        padding: 20px;
+    }
+
+    .nav-list.active {
+        display: flex;
+    }
+
+    .nav-list li {
+        margin-bottom: 10px;
+    }
+
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+    }
+
+    .menu-toggle.active span:first-child {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.active span:last-child {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
 }
