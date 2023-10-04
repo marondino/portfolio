@@ -281,12 +281,32 @@ a {
     margin-top: 40px;
 }
 
+.content-text1 {
+    margin-top: 48px;
+
+}
+
 .m-title2 {
     color: #101010;
     font-family: Avenir Next;
     font-size: 24px;
     font-style: normal;
-    font-weight: 600;
+    ont-weight: 600;
     line-height: 32px; /* 133.333% */
+    align-self: stretch;
+}
+
+.content-text2 {
     margin-top: 48px;
+    margin-bottom: 80px;
+}
+
+.m-title3 {
+    color: #101010;
+    font-family: Avenir Next;
+    font-size: 24px;
+    font-style: normal;
+    ont-weight: 600;
+    line-height: 32px; /* 133.333% */
+    align-self: stretch;
 }
