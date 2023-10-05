@@ -22,10 +22,10 @@ body {
 
 .homeText {
     color: #101010;
-    font-size: 72px;
-    margin-top: 10%;
-    padding-left: auto;
-    padding-right: 80px;
+    font-size: 4vw; /* Responsive font size */
+    margin-top: 10vh; /* Responsive margin */
+    padding-left: 5%; /* Responsive padding */
+    padding-right: 5%; /* Responsive padding */
     font-weight: 600;
     word-wrap: break-word;
     text-align: left;
@@ -33,14 +33,14 @@ body {
 
 .paragraph {
     color: #101010;
-    font-size: 24px;
-    margin-top: 50%;
-    padding-left: auto;
-    padding-right: 80px;
-    font-family: Avenir Next;
+    font-size: 2vw; /* Responsive font size */
+    margin-top: 5vh; /* Responsive margin */
+    padding-left: 5%; /* Responsive padding */
+    padding-right: 5%; /* Responsive padding */
+    font-family: 'Avenir Next', sans-serif;
     font-weight: 200;
-    letter-spacing: 3.84px;
-    word-wrap: break-word
+    letter-spacing: 0.1em; /* Responsive letter spacing */
+    word-wrap: break-word;
 }
 
 .flex-container {
@@ -54,28 +54,54 @@ body {
 
 .columnText {
     flex: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    text-align: center; /* Center text horizontally */
   }
 
-  @media (max-width: 800px) {
+/* Media Query for Smaller Screens */
+@media (max-width: 600px) {
     .flex-container {
-      flex-direction: column;
+        flex-direction: column;
     }
-  }
+    
+    .homeText,
+    .paragraph {
+        font-size: 6vw; /* Adjust font size for smaller screens */
+        margin-top: 10vh;
+        padding-left: 5%;
+        padding-right: 5%;
+        text-align: center; /* Center-align text */
+    }
+}
 
 .primary-button {
     background-color: #ffffff;
     color: #101010;
-    width: 312px;
+    width: 100%;
+    max-width: 312px;
     height: 80px;
     flex-shrink: 0;
     text-align: center;
-    font-family: Avenir Next;
+    font-family: 'Avenir Next', sans-serif;
     font-size: 16px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
     letter-spacing: 3.84px;
     cursor: pointer;
+    /* Center the button horizontally */
+    margin: 0 auto;
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 600px) {
+    .primary-button {
+        font-size: 14px; /* Adjust font size for smaller screens */
+        height: 60px; /* Adjust button height for smaller screens */
+    }
 }
 
 .menu {
@@ -178,7 +204,7 @@ body {
 
 #s-title {
     color: #6941C6;
-    font-family: Avenir Next;
+    font-family: 'Avenir Next', sans-serif;
     font-size: 14px;
     font-style: normal;
     font-weight: 600;
@@ -187,7 +213,7 @@ body {
 
 #m-title {
     color: #101828;
-    font-family: Avenir Next;
+    font-family: 'Avenir Next', sans-serif;
     font-size: 24px;
     font-style: normal;
     font-weight: 600;
@@ -200,7 +226,7 @@ svg {
 
 #p-cardText {
     color: #475467;
-    font-family: Avenir Next;
+    font-family: 'Avenir Next', sans-serif;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -220,8 +246,8 @@ svg {
     padding: 2px 10px;
     align-items: center;
     border-radius: 16px;
-    border: 1px solid var(--gray-200, #EAECF0);
-    background: var(--gray-50, #F9FAFB);
+    border: 1px solid var(--purple-200, #D9D6FE);
+    background: var(--purple-50, #F4F3FF);
     mix-blend-mode: multiply;
 }
 
@@ -240,6 +266,16 @@ svg {
     padding: 2px 10px;
     align-items: center;
     border-radius: 16px;
+    border: 1px solid var(--gray-200, #EAECF0);
+    background: var(--gray-50, #F9FAFB);
+    mix-blend-mode: multiply;
+}
+
+.chip-4 {
+    display: flex;
+    padding: 2px 10px;
+    align-items: center;
+    border-radius: 16px;
     border: 1px solid var(--orange-200, #F9DBAF);
     background: var(--orange-50, #FEF6EE);
     mix-blend-mode: multiply;
@@ -252,7 +288,7 @@ svg {
     background: #101010;
     color: #FFF;
     text-align: center;
-    font-family: Avenir Next;
+    font-family: 'Avenir Next', sans-serif;
     font-size: 16px;
     font-style: normal;
     font-weight: 600;
@@ -273,7 +309,7 @@ a {
 .page-title {
     width: 1192px;
     color: #101010;
-    font-family: Avenir Next;
+    font-family: 'Avenir Next', sans-serif;
     font-size: 208px;
     font-style: normal;
     font-weight: 400;
@@ -288,11 +324,11 @@ a {
 
 .m-title2 {
     color: #101010;
-    font-family: Avenir Next;
+    font-family: 'Avenir Next', sans-serif;
     font-size: 24px;
     font-style: normal;
-    ont-weight: 600;
-    line-height: 32px; /* 133.333% */
+    font-weight: 600;
+    line-height: 133.333%;
     align-self: stretch;
 }
 
@@ -303,10 +339,81 @@ a {
 
 .m-title3 {
     color: #101010;
-    font-family: Avenir Next;
+    font-family: 'Avenir Next', sans-serif;
     font-size: 24px;
     font-style: normal;
-    ont-weight: 600;
-    line-height: 32px; /* 133.333% */
+    font-weight: 600;
+    line-height: 133.333%;
     align-self: stretch;
 }
+
+.page-title2 {
+    width: 1192px;
+    color: #101010;
+    font-family: Avenir Next;
+    font-size: 104px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 40px;
+}
+
+.container-features {
+    display: flex;
+    flex-direction: row;
+    margin-top: 48px;
+    margin-bottom: 48px;
+}
+
+.feature-tabs {
+    display: flex;
+    padding: 16px 0px 16px 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+    align-self: stretch;
+}
+
+.tab-title {
+    align-self: stretch;
+    color: var(--gray-900, #101828);
+/* Text xl/Semibold */
+    font-family: Avenir Next;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+}
+
+.conclusion-container {
+    display: flex;
+    padding: 32px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    align-self: stretch;
+    border-radius: 16px;
+    background: var(--gray-50, #F9FAFB);
+    margin-top: 48px;
+}
+
+.conclusion-title {
+    align-self: stretch;
+    color: #101828;
+    font-family: Avenir Next;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 38px;
+}
+
+.conclusion-text {
+    align-self: stretch;
+    color: #475467;
+    font-family: Avenir Next;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+}
+
